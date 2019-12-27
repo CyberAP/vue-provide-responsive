@@ -2,8 +2,10 @@
   "compilerOptions": {
     "declaration": true,
     "declarationDir": "dist",
-    "target": "esnext",
-    "module": "esnext",
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "strict": true,
     "noImplicitAny": true,
     "removeComments": false,
     "preserveConstEnums": true,
