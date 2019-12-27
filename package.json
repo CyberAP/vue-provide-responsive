@@ -1,0 +1,25 @@
+{
+  "name": "vue-provide-responsive",
+  "version": "1.0.0",
+  "description": "Responsive design plugin for Vue using Provide\\Inject",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyberAP/vue-provide-responsive.git"
+  },
+  "keywords": [
+    "vue",
+    "responsive",
+    "provide",
+    "inject"
+  ],
+  "author": "stasvarenkin@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CyberAP/vue-provide-responsive/issues"
+  },
+  "homepage": "https://github.com/CyberAP/vue-provide-responsive#readme"
+}
