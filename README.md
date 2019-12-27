@@ -75,7 +75,7 @@ export default {
   // on the component's context
   computed: {
     responsiveValue() {
-      return this.responsive.isMobile ? 'Mobile' : 'Dekstop';
+      return this.responsive.isMobile ? 'Mobile' : 'Desktop';
     }
   }
 }
