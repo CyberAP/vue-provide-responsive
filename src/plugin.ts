@@ -8,12 +8,14 @@ const install = (Vue: any, {
   breakpoints = {},
   defaultWidth = 1024,
   window = getWindow(),
+  beforeProvide,
   onResize,
   name = 'responsive',
 }: {
   breakpoints?: Breakpoints,
   defaultWidth?: number,
   window?: Window | null,
+  beforeProvide?: (responsive: Responsive) => void,
   onResize?: (event: UIEvent, responsive: Responsive) => void,
   name?: string | symbol,
 } = {}) => {
@@ -48,11 +50,13 @@ const install = (Vue: any, {
       return acc;
     }, {});
   
-  const responsive = Vue.observable(
-    Object.assign(helpers, {
-      width: getCurrentWidth()
-    })
-  );
+  const nonReactiveResponsive = Object.assign(helpers, { width: getCurrentWidth() });
+  
+  if (beforeProvide) {
+    beforeProvide(nonReactiveResponsive);
+  }
+  
+  const responsive = Vue.observable(nonReactiveResponsive);
 
   function getCurrentWidth() {
     if (!window) return defaultWidth;
