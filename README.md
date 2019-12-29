@@ -372,7 +372,7 @@ export default {
 ```
 
 #### Performance
-`resize` is usually not a frequent event, but in case you have a lot of heavy resizing handling in your app you could use `debounce` to reduce performance strain in your watchers or computeds.
+`resize` is usually not a frequent event, but in case you have a lot of heavy resize handling in your app you could use `debounce` to reduce performance strain in your watchers or computeds.
 
 ```html
 <script>
