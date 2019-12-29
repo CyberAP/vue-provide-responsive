@@ -267,6 +267,7 @@ Vue.use(VueProvideResponsive, {
 });
 ```
 
+#### Predictive rendering
 Could also be used with a prediction tool to determine layout in SSR context.
 
 Nuxt.js example:
