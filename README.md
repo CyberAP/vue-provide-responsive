@@ -88,7 +88,9 @@ export default {
 
 An object listing resolution breakpoints that would be converted into responsive helpers.
 
-Could be either a breakpoint value (`number`) or a breakpoint configuration: `{ value: number, ignoreScrollbar: boolean }`
+Could be either a breakpoint value (`number`) or a breakpoint configuration: `{ value: number, ignoreScrollbar: boolean }`.
+
+Breakpoints are Media Query\CSS compliant, in the sence that they do not include scrollbar width. So in result your breakpoint value will be redued by the scrollbar width (they same way as Media Queries work). You can disable that behaviour with `ingnoreScrollbar: true`.
 
 ```js
 import Vue from 'vue';
