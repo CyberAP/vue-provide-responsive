@@ -29,10 +29,10 @@ const install = (Vue: any, {
     .reduce((acc, key) => {
       const breakpoint = breakpoints[key];
       const name = 'is' + key.charAt(0).toUpperCase() + key.substring(1); // mobile → isMobile
-      let value: number, ignoreScrollbar = false;
+      let value: number;
       if (typeof breakpoint === 'object') {
         value = breakpoint.value;
-        if (!ignoreScrollbar) value -= scrollbarWidth;
+        if (!breakpoint.ignoreScrollbar) value -= scrollbarWidth;
       } else {
         value = breakpoint - scrollbarWidth;
       }
