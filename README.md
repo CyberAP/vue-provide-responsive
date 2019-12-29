@@ -3,7 +3,7 @@ A Vue plugin that provides responsive design helpers, based on breakpoints.
 
 * **Performant**. All the data is retrieved in a single pass.
 * **Zero collisions**. Uses [Provide\Inject](https://vuejs.org/v2/api/index.html#provide-inject), accepts any string or a symbol as a provision name.
-* **[SSR\Nuxt Ready](#defaultwidth)**. Has [fallback width](#defaultwidth) for server-side rendering.
+* **[SSR\Nuxt Ready](#defaultwidth)**. Has fallback width for server-side rendering.
 * **Easy setup**. Nothing is required, minimal breakpoint configuration.
 * **Fully customizable**. Execute any arbitrary code in the resize callback, [provide your own helpers\values](#beforeprovide), customize existing helpers.
 * **Human readable**. No manual equality checks, easy to understand helper names.
@@ -371,8 +371,8 @@ export default {
 </script>
 ```
 
-#### Trivia
-`resize` is usually not a frequent event, but in case you have a lot of resizing in your app you could use `debounce` to reduce performance strain in your watchers or computeds.
+#### Performance
+`resize` is usually not a frequent event, but in case you have a lot of heavy resizing handling in your app you could use `debounce` to reduce performance strain in your watchers or computeds.
 
 ```html
 <script>
