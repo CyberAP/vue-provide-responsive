@@ -180,7 +180,7 @@ import VueProvideResponsive from 'vue-provide-responsive';
 Vue.use(VueProvideResponsive, {
   beforeProvide(responsive) {
     // to behave like a computed we define a getter: responsive.isSmallHeight
-    // you can define a function if want and call it: responsive.myFunc()
+    // you can define a function if you want and call it explicitly: responsive.myFunc()
     Object.defineProperty(responsive, 'isSmallHeight', {
       configurable: true,
       enumerable: true,
