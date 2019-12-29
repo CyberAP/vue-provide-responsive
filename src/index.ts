@@ -3,7 +3,6 @@ const getWindow = () => typeof window === 'undefined' ? null : window;
 type Responsive = { width: number } & Record<string, any>;
 type Breakpoint = number | { value: number, ignoreScrollbar: boolean };
 type Breakpoints = Record<string, Breakpoint>;
-type ResponsiveHelper = (this: Responsive) => boolean;
 
 const install = (Vue: any, {
   breakpoints = {},
@@ -33,20 +32,16 @@ const install = (Vue: any, {
       let value: number, ignoreScrollbar = false;
       if (typeof breakpoint === 'object') {
         value = breakpoint.value;
-        ignoreScrollbar = breakpoint.ignoreScrollbar;
+        if (!ignoreScrollbar) value -= scrollbarWidth;
       } else {
         value = breakpoint;
       }
-      const withScrollbar: ResponsiveHelper = function responsiveHelper() {
-        return this.width + scrollbarWidth <= value;
-      };
-      const withoutScrollbar: ResponsiveHelper = function responsiveHelper() {
-        return this.width <= value;
-      };
       Object.defineProperty(acc, name, {
         configurable: true,
         enumerable: true,
-        get: ignoreScrollbar ? withoutScrollbar : withScrollbar,
+        get() {
+          return this.width <= value;
+        }
       });
       return acc;
     }, {});
