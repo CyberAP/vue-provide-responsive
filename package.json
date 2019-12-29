@@ -1,6 +1,6 @@
 {
   "name": "vue-provide-responsive",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Responsive design plugin for Vue using Provide\\Inject",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

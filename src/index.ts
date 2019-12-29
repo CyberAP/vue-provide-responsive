@@ -34,7 +34,7 @@ const install = (Vue: any, {
         value = breakpoint.value;
         if (!ignoreScrollbar) value -= scrollbarWidth;
       } else {
-        value = breakpoint;
+        value = breakpoint - scrollbarWidth;
       }
       Object.defineProperty(acc, name, {
         configurable: true,
