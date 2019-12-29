@@ -270,7 +270,7 @@ Vue.use(VueProvideResponsive, {
 #### Predictive rendering
 Could also be used with a prediction tool to determine layout in SSR context.
 
-Nuxt.js example:
+Nuxt.js example using [UAParser.js](https://github.com/faisalman/ua-parser-js):
 
 ```js
 // plugins/responsive.js
