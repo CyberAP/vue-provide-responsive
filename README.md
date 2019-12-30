@@ -385,15 +385,15 @@ export default {
   name: "MyComponent",
   data() {
     return {
-      myDebouncedFn: debounce(() => {
-        this.value = myHeavyFunction(this.responsive.width);
+      myDebouncedFn: debounce((width) => {
+        this.value = myHeavyFunction(width);
       }, 500),
       value: null,
     }
   },
   watch: {
-    'responsive.width': function(value) {
-      this.myDeboucnedFn(value);
+    'responsive.width': function(width) {
+      this.myDeboucnedFn(width);
     }
   }
 }
