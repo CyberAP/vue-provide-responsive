@@ -11,6 +11,7 @@ const install = (Vue: any, {
   beforeProvide,
   onResize,
   name = 'responsive',
+  ssr = false,
 }: {
   breakpoints?: Breakpoints,
   defaultWidth?: number,
@@ -18,6 +19,7 @@ const install = (Vue: any, {
   beforeProvide?: (responsive: Responsive) => void,
   onResize?: (event: UIEvent, responsive: Responsive) => void,
   name?: string | symbol,
+  ssr?: boolean,
 } = {}) => {
 
   const scrollbarWidth = (() => {
@@ -60,6 +62,13 @@ const install = (Vue: any, {
   }
 
   if (window) {
+    // do not break hydration in SSR
+    if (ssr || '__NUXT__' in window) {
+      responsive.width = defaultWidth;
+      requestAnimationFrame(() => {
+        responsive.width = getCurrentWidth();
+      });
+    }
     window.addEventListener('resize', (event: UIEvent) => {
       responsive.width = getCurrentWidth();
       if (onResize) onResize(event, responsive);
