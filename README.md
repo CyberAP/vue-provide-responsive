@@ -52,7 +52,7 @@ import VueResponsiveProvide from 'vue-provide-responsive';
 Vue.use(VueResponsiveProvide, {
   breakpoints: {
     mobile: 768
-    // will be converted to responsive.isMobile() helper
+    // will be converted to responsive.isMobile helper (works exactly like a computed)
     // will be true if the viewport width is less or equals 768 pixels
   }
 });
