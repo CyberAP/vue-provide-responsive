@@ -205,7 +205,7 @@ import VueProvideResponsive from 'vue-provide-responsive';
 
 Vue.use(VueProvideResponsive, {
   beforeProvide(responsive) {
-    // this will be useful if you want to height to be reactive
+    // this will be useful if you want height to be reactive
     responsive.height = 0;
   },
 });
