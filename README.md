@@ -1,6 +1,8 @@
 # Vue-provide-reponsive
 A Vue plugin that provides responsive design helpers, based on breakpoints.
 
+[Demo](https://codesandbox.io/s/magical-shockley-wc287)
+
 * **Performant**. All the data is retrieved in a single pass.
 * **Zero collisions**. Uses [Provide\Inject](https://vuejs.org/v2/api/index.html#provide-inject), accepts any string or a symbol as a provision name.
 * **[SSR\Nuxt Ready](#defaultwidth)**. Has fallback width for server-side rendering.
