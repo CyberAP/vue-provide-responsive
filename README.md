@@ -317,6 +317,8 @@ export default ({ req }) => {
 
 **Type**: `boolean`
 
+**Default**: `false`
+
 Triggers supports for hydration on the client. Set this to `true` if you're using a custom SSR. Nuxt users will get this out of the box.
 
 ### **`window`**
