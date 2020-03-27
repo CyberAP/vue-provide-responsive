@@ -1,4 +1,4 @@
-# Vue-provide-reponsive
+# Vue-provide-responsive
 A Vue plugin that provides responsive design helpers, based on breakpoints.
 
 [![npm](https://img.shields.io/npm/v/vue-provide-responsive)](https://www.npmjs.com/package/vue-provide-responsive)
