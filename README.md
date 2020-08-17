@@ -1,3 +1,6 @@
+**This library is no longer maintained. Please refer to [`vue-component-media-queries`](https://github.com/CyberAP/vue-component-media-queries) instead.**
+
+
 # Vue-provide-responsive
 A Vue plugin that provides responsive design helpers, based on breakpoints.
 
